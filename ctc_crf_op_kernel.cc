@@ -366,6 +366,7 @@ REGISTER_KERNEL_BUILDER(Name("CtcCrfLoss").Device(::tensorflow::DEVICE_GPU)
                         .HostMemory("labels_indices")
                         .HostMemory("labels_values")
                         .HostMemory("input_lengths")
+                        .HostMemory("activations")
                         .HostMemory("costs")
                         .HostMemory("costs_alpha"),
                         CTCCRFLossOpGPU);

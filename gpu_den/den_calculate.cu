@@ -450,7 +450,7 @@ extern "C" {
 
     alpha_last_kernel<<<batch_size, CU_BLOCK_DIM, 0, stream>>>(alpha, alpha_size, batch_size, T, input_lengths, END_WEIGHT[gid]);
     alpha_lld_kernal<<<batch_size, alpha_lld_dim, sizeof(float)*alpha_lld_dim, stream>>>(alpha, alpha_size, T, input_lengths, loglikelihood);
-    // cudaDeviceSynchronize();
+    cudaDeviceSynchronize();
   }
 
 // FIXME(huanglk): 20200401, Not using.
@@ -481,8 +481,8 @@ extern "C" {
     }
 
     beta_first_kernel<<<batch_size, CU_BLOCK_DIM, 0, stream>>>(beta, beta_size, batch_size, START_WEIGHT[gid]);
+    cudaDeviceSynchronize();
     // FIXME(huanglk): 20200401, Not using.
     // beta_lld_kernal<<<1, batch_size, 0, stream>>>(beta, beta_size, loglikelihood);
-    // cudaDeviceSynchronize();
   }
 }
