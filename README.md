@@ -8,8 +8,6 @@ This is a modified version of [thu-spmi/CAT](https://github.com/thu-spmi/CAT). I
 
 My task is all in Tensorflow, so I modify the source codes [thu-spmi/CAT](https://github.com/thu-spmi/CAT) in Tensorflow API.
 
-**NOTE: It has some problem in GPU-DEN calculation. It has different result from CAT Pytorch API. Hope you can help me to find the problem.** 
-
 ## Contents
 
 - Test:
@@ -26,7 +24,7 @@ My task is all in Tensorflow, so I modify the source codes [thu-spmi/CAT](https:
 - Others:
 
   - `gpu_ctc/`: Just follow [thu-spmi/CAT](https://github.com/thu-spmi/CAT)
-  - `gpu_den/`: Just follow [thu-spmi/CAT](https://github.com/thu-spmi/CAT), only remove some usless code that I think will not used.
+  - `gpu_den/`: Code refactoring from [thu-spmi/CAT](https://github.com/thu-spmi/CAT).
 
 ## Requirements
 
