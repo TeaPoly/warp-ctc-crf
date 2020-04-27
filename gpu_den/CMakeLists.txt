@@ -34,6 +34,15 @@ ENDIF()
 #set(CUDA_NVCC_FLAGS "${CUDA_NVCC_FLAGS} --std=c++11")
 set(CUDA_NVCC_FLAGS "${CUDA_NVCC_FLAGS}")
 
-add_library(crf_fst_read SHARED fst_read.cc)
-cuda_add_library(crf_fst_den SHARED den_calculate.cu)
-target_link_libraries(crf_fst_den crf_fst_read)
+# add_library(crf_fst_read SHARED fst_read.cc)
+# cuda_add_library(crf_fst_den SHARED den_calculate.cu)
+# target_link_libraries(crf_fst_den crf_fst_read)
+
+cuda_add_library(crf_fst_den SHARED 
+  crf_entrypoint.cu)
+
+# target_link_libraries(crf_fst_den crf_fst_read)
+
+cuda_add_executable(test_gpu tests/test_gpu.cu)
+TARGET_LINK_LIBRARIES(test_gpu crf_fst_den) #  ${CUDA_curand_LIBRARY}
+

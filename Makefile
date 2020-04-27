@@ -1,9 +1,4 @@
-# Copyright 2018-2019 Tsinghua University, Author: Hongyu Xiang
-# Apache 2.0.
-# CTC-CRF Makefile
-
 openfst_dir=/usr/local
-#PATHWEIGHT
 
 .PHONY: GPUCTC GPUDEN PATHWEIGHT CTCCRF
 all: CTCCRF
@@ -19,6 +14,6 @@ PATHWEIGHT:
 	mkdir -p path_weight/build
 	cd path_weight/build && cmake -D openfst_dir:STRING=${openfst_dir} ..
 	cd path_weight/build && make
-CTCCRF: GPUCTC GPUDEN
-	python setup.py install
+CTCCRF: GPUCTC GPUDEN PATHWEIGHT
+	python3 setup.py install
 

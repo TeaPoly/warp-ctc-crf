@@ -1,4 +1,4 @@
-"""setup.py script for warp-ctc TensorFlow wrapper"""
+"""setup.py script for ctc-crf TensorFlow wrapper"""
 
 from __future__ import print_function
 
@@ -37,11 +37,9 @@ root_path = os.path.realpath(os.path.dirname(__file__))
 tf_include = tf.sysconfig.get_include()
 tf_src_dir = os.environ["TENSORFLOW_SRC_PATH"]
 tf_includes = [tf_include, tf_src_dir]
-# ctc_crf_includes = [os.path.join(root_path, '../include')]
+
 ctc_crf_includes = ['./gpu_ctc','./gpu_den']
 include_dirs = tf_includes + ctc_crf_includes
-
-#include_dirs += [tf_include + '/../../external/nsync/public']
 
 if os.getenv("TF_CXX11_ABI") is not None:
     TF_CXX11_ABI = os.getenv("TF_CXX11_ABI")
@@ -93,7 +91,7 @@ ext = setuptools.Extension('ctc_crf_tensorflow.kernels',
                            include_dirs = include_dirs,
                            library_dirs = [den_dir, ctc_dir],
                            runtime_library_dirs = [den_dir, ctc_dir],
-                           libraries = ['crf_fst_den','crf_fst_read','crf_warpctc', 'tensorflow_framework'],
+                           libraries = ['crf_fst_den', 'crf_warpctc', 'tensorflow_framework'],
                            extra_compile_args = extra_compile_args,
                            extra_link_args = extra_link_args)
 
