@@ -4,14 +4,11 @@ An extension of [thu-spmi](https://github.com/thu-spmi) [CAT](https://github.com
 
 ## Introduction
 
-This is a modified version of [thu-spmi/CAT](https://github.com/thu-spmi/CAT). I just modify the code to the new CPP Extensions API style of Tensorflow.
-
-My task is all in Tensorflow, so I modify the source codes [thu-spmi/CAT](https://github.com/thu-spmi/CAT) in Tensorflow API.
+This is a modified version of [thu-spmi/CAT](https://github.com/thu-spmi/CAT). I just modify the code to the new CPP Extensions API style of Tensorflow and refact the `gpu_den` code.
 
 ## Contents
 
 - Test:
-  - `tests/test_ctc_crf_base_pytorch_binding.py` is a simple test for PyTorch API in [thu-spmi/CAT](https://github.com/thu-spmi/CAT).
 
   - `tests/test_ctc_crf_op.py` is a simple test for Tensorflow API for CAT.
 
