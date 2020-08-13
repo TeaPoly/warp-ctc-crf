@@ -1,4 +1,4 @@
-openfst_dir=/usr/local
+openfst_dir=${OPENFST} #/usr/local
 
 .PHONY: GPUCTC GPUDEN PATHWEIGHT CTCCRF
 all: CTCCRF
