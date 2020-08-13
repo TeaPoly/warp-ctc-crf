@@ -1,4 +1,4 @@
-# warp-crf
+# warp-ctc-crf
 
 TensorFlow binding for CTC-CRF. An extension of [thu-spmi](https://github.com/thu-spmi) [CAT](https://github.com/thu-spmi/CAT) for Tensorflow.
 
@@ -51,7 +51,7 @@ Because CTC-CRF operator is based on CUDA Toolkit, so you should setting CUDA en
    conda install tensorflow-gpu==1.15.0
      ```
    
-4. Install CTC-CRF TensorFlow wrapper [warp-ctc-crf](https://github.com/TeaPoly/warp-ctc-crf)
+4. Install CTC-CRF TensorFlow wrapper
 
    setting your `TENSORFLOW_SRC_PATH` and `OPENFST`.
 
