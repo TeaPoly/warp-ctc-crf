@@ -21,8 +21,8 @@ Because CTC-CRF operator is based on CUDA Toolkit, so you should setting CUDA en
 
 1. Install CUDA Toolkit
 
-- Follow this [link](https://developer.nvidia.com/cuda-10.1-download-archive-update2?target_os=Linux&target_arch=x86_64) to download and install CUDA Toolkit 10.1 for your Linux distribution.
-- Installation instructions can be found [here](https://docs.nvidia.com/cuda/archive/10.1/cuda-installation-guide-linux/index.html)
+- Follow this [link](https://developer.nvidia.com/cuda-10.0-download-archive) to download and install CUDA Toolkit for your Linux distribution.
+- Installation instructions can be found [here](https://docs.nvidia.com/cuda/archive/10.0/cuda-installation-guide-linux/index.html)
 
 2. Environment Setup
 
