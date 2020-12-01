@@ -8,7 +8,7 @@ This is a modified version of [thu-spmi/CAT](https://github.com/thu-spmi/CAT). I
 
 ## Requirements
 
-- [Cuda Toolkit](https://developer.nvidia.com/cuda-toolkit)/[CuDNN](https://developer.nvidia.com/cudnn)
+- [Cuda Toolkit 10.0.130](https://developer.nvidia.com/cuda-toolkit)/[CuDNN 7.6.4](https://developer.nvidia.com/cudnn)
 - [gcc/g++ 5.5.0](https://gcc.gnu.org)
 - [Python3](https://www.python.org/download/releases/3.0/)
 - [TensorFlow](https://www.tensorflow.org)
@@ -24,20 +24,13 @@ Because CTC-CRF operator is based on CUDA Toolkit, so you should setting CUDA en
 - Follow this [link](https://developer.nvidia.com/cuda-10.1-download-archive-update2?target_os=Linux&target_arch=x86_64) to download and install CUDA Toolkit 10.1 for your Linux distribution.
 - Installation instructions can be found [here](https://docs.nvidia.com/cuda/archive/10.1/cuda-installation-guide-linux/index.html)
 
-- Install CUDNN
-  - Go to https://developer.nvidia.com/rdp/cudnn-download
-  - Create a user profile if needed and log in
-  - Select [cuDNN v7.6.5 (Nov 5, 2019), for CUDA 10.1](https://developer.nvidia.com/rdp/cudnn-download#a-collapse765-101)
-  - Download [cuDNN v7.6.5 Library for Linux](https://developer.nvidia.com/compute/machine-learning/cudnn/secure/7.6.5.32/Production/10.1_20191031/cudnn-10.1-linux-x64-v7.6.5.32.tgz)
-  - Follow the instructions under Section 2.3.1 of the [CuDNN Installation Guide](https://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html#install-linux) to install CuDNN.
-
 2. Environment Setup
 
    Append the following lines to `~/.bashrc` or `~/.zshrc`.
 
    ```shell
-   export PATH=/usr/local/cuda-10.1/bin${PATH:+:${PATH}}
-   export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+   export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}
+   export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
    ```
 
 3. Install TensorFlow with Anaconda virtual environment
