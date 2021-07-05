@@ -1,6 +1,6 @@
 # warp-ctc-crf
 
-TensorFlow binding for CTC-CRF. An extension of [thu-spmi](https://github.com/thu-spmi) [CAT](https://github.com/thu-spmi/CAT) for Tensorflow.
+TensorFlow binding for CTC-CRF. An extension of [thu-spmi/CAT](https://github.com/thu-spmi/CAT) for Tensorflow.
 
 ## Introduction
 
